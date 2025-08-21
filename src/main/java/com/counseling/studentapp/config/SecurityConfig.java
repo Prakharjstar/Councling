@@ -42,7 +42,7 @@ private CustomSuccessHandler customSuccessHandler;
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/", "/signup", "/register", "/css/**", "/js/**", "/oauth2/**").permitAll()
+                .requestMatchers("/", "/signup", "/register", "/css/**", "/images/**","/js/**", "/oauth2/**" ,"/login/oauth2/**").permitAll()
                 .requestMatchers("/admin/**").hasRole("ADMIN")       // For role-based access
                 .requestMatchers("/student/**").hasRole("STUDENT")
                 .requestMatchers("/dashboard").authenticated()
