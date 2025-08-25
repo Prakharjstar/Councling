@@ -61,4 +61,18 @@ public String registerUser(@ModelAttribute com.counseling.studentapp.model.User 
     return "signup";
 }
 
+@GetMapping("/Contactus")
+public String Contactus(){
+    return "Contactus.html";
+}
+ @GetMapping("/privacy")
+    public String privacyPolicy() {
+        return "PrivacyPolicy.html"; 
+    }
+
+     @GetMapping("/terms")
+    public String termsPage() {
+        return "terms"; 
+    }
+
 }
